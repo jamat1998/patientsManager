@@ -1,0 +1,2 @@
+# patientsManager
+react+tailwindCSS
