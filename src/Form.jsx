@@ -60,6 +60,7 @@ function Form({ pacientes, setPacientes, paciente,setPaciente,setEditing,editing
     setMascota("");
     setSintomas("");
     setPropietario("");
+    setEditing(false)
   };
 
   return (
@@ -157,7 +158,6 @@ function Form({ pacientes, setPacientes, paciente,setPaciente,setEditing,editing
           />
         </div>
         <input
-         onClick={()=>setEditing(false)}
           type="submit"
           className="bg-indigo-600 mx-auto w-full p-3 text-white uppercase font-bold hover:bg-indigo-500 mt-2 rounded-lg cursor-pointer transition-all"
           value={editing ? "Editar Paciente" : "Agregar Paciente"}
