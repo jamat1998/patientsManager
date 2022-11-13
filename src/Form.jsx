@@ -50,7 +50,6 @@ function Form({ pacientes, setPacientes, paciente,setPaciente,setEditing,editing
     } else {
       objPacientes.id = generarId();
       setPacientes([...pacientes, objPacientes]);
-      setPaciente({})
     }
 
     //Reiniciar formulario
@@ -61,6 +60,7 @@ function Form({ pacientes, setPacientes, paciente,setPaciente,setEditing,editing
     setSintomas("");
     setPropietario("");
     setEditing(false)
+    setPaciente({})
   };
 
   return (
