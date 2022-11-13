@@ -1,12 +1,6 @@
 import { confirm } from "react-alert-confirm";
 import "react-alert-confirm/dist/index.css";
-function Patients({
-  paciente,
-  setPaciente,
-  eliminarPaciente,
-  setEditing,
-  editing,
-}) {
+function Patients({ paciente, setPaciente, eliminarPaciente }) {
   const handlerDelete = async () => {
     await confirm({
       title: "Eliminar Paciente",
@@ -51,10 +45,9 @@ function Patients({
 
       <div className="flex justify-between">
         <button
-          onClick={() =>{
-            setEditing(true)
-            setPaciente(paciente)}
-          } 
+          onClick={() => {
+            setPaciente(paciente);
+          }}
           className="bg-indigo-600 rounded-lg text-white px-6 uppercase font-bold hover:bg-indigo-500 mt-2"
           type="button"
         >
