@@ -1,5 +1,5 @@
 import Patients from "./Patients";
-function ListPatients({ pacientes, setPaciente, eliminarPaciente }) {
+function ListPatients({ pacientes, setPaciente, eliminarPaciente,setEditing,editing }) {
 
   return (
     <div className="h-screen overflow-y-scroll">
@@ -12,7 +12,7 @@ function ListPatients({ pacientes, setPaciente, eliminarPaciente }) {
           </p>
 
           {pacientes.map((paciente) => (
-            <Patients key={paciente.id} paciente={paciente} setPaciente={setPaciente} eliminarPaciente={eliminarPaciente}/>
+            <Patients key={paciente.id} paciente={paciente} setPaciente={setPaciente} eliminarPaciente={eliminarPaciente} setEditing={setEditing} editing={editing}/>
           ))}
         </>
       ) : (

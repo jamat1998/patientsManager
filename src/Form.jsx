@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Error from "./Error";
-function Form({ pacientes, setPacientes, paciente,setPaciente }) {
+function Form({ pacientes, setPacientes, paciente,setPaciente,setEditing,editing}) {
   const [Mascota, setMascota] = useState("");
   const [Propietario, setPropietario] = useState("");
   const [Email, setEmail] = useState("");
@@ -157,9 +157,10 @@ function Form({ pacientes, setPacientes, paciente,setPaciente }) {
           />
         </div>
         <input
+         onClick={()=>setEditing(false)}
           type="submit"
           className="bg-indigo-600 mx-auto w-full p-3 text-white uppercase font-bold hover:bg-indigo-500 mt-2 rounded-lg cursor-pointer transition-all"
-          value={paciente.id ? "Editar Paciente" : "Agregar Paciente"}
+          value={editing ? "Editar Paciente" : "Agregar Paciente"}
         />
       </form>
     </div>
